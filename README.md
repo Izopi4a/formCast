@@ -20,6 +20,14 @@ How to use it
 --------
 
 ```php
+
+$_GET['name'] = 'my na"me is\drop database';
+$_GET['password'] = 'my@@!$#$SDFpassword';
+$_GET['age'] = 151;
+$_GET['colors'] = [
+    1,2,3,"koko"
+];
+
 $vars = (new \Forms\Layer($_GET, array(
     'name'=> 'string',
     'password' => 'password',
@@ -28,5 +36,20 @@ $vars = (new \Forms\Layer($_GET, array(
         'limit' => [0, 120],
         'default' => null
     ],
+    'colors' = 'ArrayInt'
 )))->getData();
+
+print_r($vars);
+
+array(
+    "name" => 'my name is drop database',
+    "password" => 'my@@!$#$SDFpassword',
+    "age" => null,
+    "colors" => array(
+        [0] => 1,
+        [1] => 2,
+        [2] => 3
+    )
+)
+
 ```
