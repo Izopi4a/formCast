@@ -1,31 +1,16 @@
-formCast
+Casting forms with php
 ========
 
-cast forms with php
+Requirments
+--------
+
+php 5.5 +
 
 
+Installation
+--------
 
-example usage: 
-
-$_GET['query'] = 'a"\sd';
-
-$form = new Forms\Cast($_GET, array(
-    'query' => array('name', 'string')
-));
-
-$vars = $form->getData();
-
-it will print: 
-[name] = "asd";
-
-or just use
-
-$form = new Forms\Cast($_GET, array(
-    'query' => 'string'
-));
-
-$vars = $form->getData();
-
-it will print
-
-[query] = "asd"
+`
+simply copy formCast.php into your work directory and dont forget to include it
+require_once(MY_PATH.'/formCast.php');
+`
