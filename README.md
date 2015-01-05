@@ -10,11 +10,11 @@ php 5.5 +
 Installation
 --------
 
-`
 simply copy formCast.php into your work directory and dont forget to include it
 
-require_once(MY_PATH.'/cast.php');
-`
+```php
+    require_once(MY_PATH.'/cast.php');
+```
 
 How to use it
 --------
@@ -39,7 +39,12 @@ $vars = (new \Forms\Layer($_GET, array(
     'colors' = 'ArrayInt'
 )))->getData();
 
-print_r($vars);
+```
+
+
+print_r($vars) will show:
+
+```php
 
 array(
     "name" => 'my name is drop database',
@@ -51,5 +56,4 @@ array(
         [2] => 3
     )
 )
-
 ```
